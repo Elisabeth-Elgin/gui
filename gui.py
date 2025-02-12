@@ -148,13 +148,31 @@ canvas.create_text(
     font=("Roboto Black", 40 * -1)
 )
 
+
+
 canvas.create_text(
     366.4584655761719,
     234.9700164794922,
     anchor="nw",
-    text="                                                           System Description:         \nMake a compatible easy-to-use user interface within an application that allows \nthe automated scheduling of university courses by the dean of a given department from imported data.\n     User Instruction：\n1. Go to the `Input Data` module to enter course, faculty, and classroom details.\n2. Select `Generate Schedule` from the main dashboard to create the course schedule.\n3. View the generated schedule in `View Schedule` for a detailed overview.\n4. Use the `Conflict Resolution` module to address any detected issues.\n5. Generate reports in the `Reports` module for printing or sharing.\n6. Adjust system settings in the `Settings` module if needed.\n\nFor additional help, click the `Help` button in the navigation bar.\n\n\n\n\n\n\n",
+    text="""                                                           System Description:
+
+Make a compatible easy-to-use user interface within an application that allows 
+the automated scheduling of university courses by the dean of a given department
+from imported data.
+
+User Instruction：
+1. Go to the `Input Data` module to enter course, faculty, and classroom details.
+2. Select `Generate Schedule` from the main dashboard to create the course schedule.
+3. View the generated schedule in `View Schedule` for a detailed overview.
+4. Use the `Conflict Resolution` module to address any detected issues.
+5. Generate reports in the `Reports` module for printing or sharing.
+6. Adjust system settings in the `Settings` module if needed.
+
+For additional help, click the `Help` button in the navigation bar.
+""",
     fill="#094478",
     font=("Roboto Regular", 24 * -1)
 )
+
 window.resizable(False, False)
 window.mainloop()
