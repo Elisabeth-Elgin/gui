@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\cs499\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\fuzhe\OneDrive\Desktop\cs hw\gui\assets\frame4")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -132,47 +132,80 @@ image_1 = canvas.create_image(
 )
 
 canvas.create_rectangle(
-    332.0,
-    52.0,
-    1384.0,
-    987.0,
+    1063.0,
+    0.0,
+    1455.0,
+    81.0,
     fill="#DAEBF9",
     outline="")
 
-canvas.create_text(
-    486.2366027832031,
-    95.02468872070312,
-    anchor="nw",
-    text="Welcome to Course Scheduling System",
-    fill="#094478",
-    font=("Roboto Black", 40 * -1)
+entry_image_1 = PhotoImage(
+    file=relative_to_assets("entry_1.png"))
+entry_bg_1 = canvas.create_image(
+    1301.0,
+    40.5,
+    image=entry_image_1
+)
+entry_1 = Entry(
+    bd=0,
+    bg="#FFFFFF",
+    fg="#000716",
+    highlightthickness=0
+)
+entry_1.place(
+    x=1167.0,
+    y=14.0,
+    width=268.0,
+    height=51.0
 )
 
-
-
-canvas.create_text(
-    366.4584655761719,
-    234.9700164794922,
-    anchor="nw",
-    text="""                                                           System Description:
-
-Make a compatible easy-to-use user interface within an application that allows 
-the automated scheduling of university courses by the dean of a given department
-from imported data.
-
-User Instruction：
-1. Go to the `Input Data` module to enter course, faculty, and classroom details.
-2. Select `Generate Schedule` from the main dashboard to create the course schedule.
-3. View the generated schedule in `View Schedule` for a detailed overview.
-4. Use the `Conflict Resolution` module to address any detected issues.
-5. Generate reports in the `Reports` module for printing or sharing.
-6. Adjust system settings in the `Settings` module if needed.
-
-For additional help, click the `Help` button in the navigation bar.
-""",
-    fill="#094478",
-    font=("Roboto Regular", 24 * -1)
+image_image_2 = PhotoImage(
+    file=relative_to_assets("image_2.png"))
+image_2 = canvas.create_image(
+    1116.0,
+    41.0,
+    image=image_image_2
 )
 
+canvas.create_text(
+    1067.0,
+    113.0,
+    anchor="nw",
+    text="SORT BY:",
+    fill="#094478",
+    font=("Jomolhari Regular", 20 * -1)
+)
+
+button_image_6 = PhotoImage(
+    file=relative_to_assets("button_6.png"))
+button_6 = Button(
+    image=button_image_6,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_6 clicked"),
+    relief="flat"
+)
+button_6.place(
+    x=1167.0,
+    y=864.0,
+    width=200.0,
+    height=101.0
+)
+
+button_image_7 = PhotoImage(
+    file=relative_to_assets("button_7.png"))
+button_7 = Button(
+    image=button_image_7,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_7 clicked"),
+    relief="flat"
+)
+button_7.place(
+    x=1204.0,
+    y=107.0,
+    width=134.0,
+    height=41.0
+)
 window.resizable(False, False)
 window.mainloop()
