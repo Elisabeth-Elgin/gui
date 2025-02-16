@@ -11,7 +11,7 @@ from tkinter import Tk, Canvas, Entry, Text, Button, PhotoImage
 
 
 OUTPUT_PATH = Path(__file__).parent
-ASSETS_PATH = OUTPUT_PATH / Path(r"C:\cs499\build\assets\frame0")
+ASSETS_PATH = OUTPUT_PATH / Path(r"C:\Users\fuzhe\OneDrive\Desktop\cs hw\gui\assets\frame1")
 
 
 def relative_to_assets(path: str) -> Path:
@@ -131,46 +131,79 @@ image_1 = canvas.create_image(
     image=image_image_1
 )
 
-canvas.create_rectangle(
-    257.0,
-    13.0,
-    1434.0,
-    1023.0,
-    fill="#DAEBF9",
-    outline="")
-
-canvas.create_text(
-    486.2366027832031,
-    95.02468872070312,
-    anchor="nw",
-    text="Welcome to Course Scheduling System",
-    fill="#094478",
-    font=("Roboto Black", 40 * -1)
+button_image_6 = PhotoImage(
+    file=relative_to_assets("button_6.png"))
+button_6 = Button(
+    image=button_image_6,
+    borderwidth=0,
+    highlightthickness=0,
+    command=lambda: print("button_6 clicked"),
+    relief="flat"
+)
+button_6.place(
+    x=250.0,
+    y=25.0,
+    width=1177.0,
+    height=211.0
 )
 
 canvas.create_text(
-    366.4584655761719,
-    234.9700164794922,
+    481.0,
+    299.0,
     anchor="nw",
-    text="""                                                           System Description:
-
-Make a compatible easy-to-use user interface within an application that allows 
-the automated scheduling of university courses by the dean of a given department
-from imported data.
-
-User Instruction：
-1. Go to the `Input Data` module to enter course, faculty, and classroom details.
-2. Select `Generate Schedule` from the main dashboard to create the course schedule.
-3. View the generated schedule in `View Schedule` for a detailed overview.
-4. Use the `Conflict Resolution` module to address any detected issues.
-5. Generate reports in the `Reports` module for printing or sharing.
-6. Adjust system settings in the `Settings` module if needed.
-
-For additional help, click the `Help` button in the navigation bar.
-""",
+    text="File name",
     fill="#094478",
-    font=("Roboto Regular", 24 * -1)
+    font=("Roboto Black", 20 * -1)
 )
 
+canvas.create_text(
+    481.0,
+    452.0,
+    anchor="nw",
+    text="File name",
+    fill="#094478",
+    font=("Roboto Black", 20 * -1)
+)
+
+canvas.create_text(
+    482.0,
+    615.0,
+    anchor="nw",
+    text="File name",
+    fill="#094478",
+    font=("Roboto Black", 20 * -1)
+)
+
+image_image_2 = PhotoImage(
+    file=relative_to_assets("image_2.png"))
+image_2 = canvas.create_image(
+    372.0,
+    322.0,
+    image=image_image_2
+)
+
+image_image_3 = PhotoImage(
+    file=relative_to_assets("image_3.png"))
+image_3 = canvas.create_image(
+    372.0,
+    467.0,
+    image=image_image_3
+)
+
+image_image_4 = PhotoImage(
+    file=relative_to_assets("image_4.png"))
+image_4 = canvas.create_image(
+    372.0,
+    633.0,
+    image=image_image_4
+)
+
+image_image_5 = PhotoImage(
+    file=relative_to_assets("image_5.png"))
+image_5 = canvas.create_image(
+    1239.0,
+    317.0,
+    image=image_image_5
+)
 window.resizable(False, False)
 window.mainloop()
