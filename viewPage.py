@@ -17,7 +17,6 @@ class ViewPage():
     def __init__(self, root):
         self.root = root
 
-
         self.fillWindow()
 
         
